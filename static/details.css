@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+p {
+    color: grey
+}
+
+.container-fluid::before {
+  content: '';
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  background-image: linear-gradient(-45deg, #50D890 0%, #16C79A 100%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 1.8s ease-in-out;
+}
+
+form {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: 0.2s 0.7s ease-in-out;
+}
+
+#heading {
+    text-transform: uppercase;
+    color: #04009A;
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset {
+    background: #fff;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.form-card {
+    text-align: center;
+    padding: 5px;
+    line-height: 2rem;
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform input,
+#msform textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 75%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #39A2DB;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #1597BB;
+    font-weight: bold;
+    color: #fff;
+    border: 0 none;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    /* float: right */
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #185ADB;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #1597BB;
+    font-weight: bold;
+    color: #fff;
+    border: 0 none;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    /* float: right */
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #185ADB;
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #39A2DB;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.purple-text {
+    color: #39A2DB;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 10px;
+ }
+
+/* .fieldlabels {
+    color: gray;
+    text-align: left
+}  */
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+}
+
+#progressbar .active {
+    color: #1597BB;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #education:before {
+    font-family: FontAwesome;
+    content: "\f003"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f015"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #1597BB;
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #39A2DB;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}

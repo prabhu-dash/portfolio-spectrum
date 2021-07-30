@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Details</title>
+  <link rel="stylesheet" href="static\details.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+        <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+          <h2 id="heading">Sign Up In Your Account</h2>
+          <h5>Fill all form field to go to next step</h5>
+          <form id="msform" action="/auth/details" method="POST">
+            <!-- progressbar -->
+            <ul id="progressbar">
+              <li class="active" id="personal"><strong>Personal</strong></li>
+              <li id="education"><strong>Education</strong></li>
+              <li id="payment"><strong>Address</strong></li>
+              <li id="confirm"><strong>Finish</strong></li>
+            </ul>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%;" aria-valuemin="0" aria-valuemax="100"></div>
+            </div> <br> <!-- fieldsets -->
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">Personal Information:</h2>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Step 1 - 4</h2>
+                  </div>
+                </div>
+                <input type="text" name="fname" placeholder="First Name" />
+                <input type="text" name="lname" placeholder="Last Name" />
+                <input type="text" name="username" placeholder="Username" />
+                <input type="text" name="phno" placeholder="Contact No." />
+              </div>
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">Education Qualification:</h2>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Step 2 - 4</h2>
+                  </div>
+                </div>
+                <input type="text" name="degree" placeholder="Degree Name" />
+                <input type="text" name="skills" placeholder="Any skills" />
+                <input type="text" name="projects" placeholder="Any projects if you have" />
+              </div>
+              <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                <input type="button" name="next" class="next action-button" value="Next" />
+
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">Address:</h2>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Step 3 - 4</h2>
+                  </div>
+                </div>
+                <input type="text" name="address" placeholder="Home Address" />
+                <input type="text" name="caddress" placeholder="Current Address" />
+                <input type="text" name="pincode" placeholder="Pincode" />
+              </div>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                <input type="button" name="next" class="next action-button submit" value="Submit" />
+
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">Finish:</h2>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Step 4 - 4</h2>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <h2 class="purple-text text-center"><strong>Congrats !!</strong></h2> <br>
+                <div class="row justify-content-center">
+                  <div class="col-3">
+                    <img src="images\smiley.png" class="fit-image">
+                  </div>
+                </div>
+                <br>
+                <br>
+                <div class="row justify-content-center">
+                  <div class="col-7 text-center">
+                    <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                  </div>
+                </div>
+              </div>
+              <a type="button" class="action-button" style="text-decoration: none">Proceed</a>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="pagesjs\details.js" charset="utf-8"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
